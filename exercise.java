@@ -1,26 +1,19 @@
+//Write a function that coutns the number of items in a binary tree
 public class BinaryTree {
     private Node root;
-
-    // Constructor
     public BinaryTree() {
         root = null;
     }
-
-    // Node class
     private static class Node {
         int key;
         Node left;
         Node right;
-
-        // Constructor
         public Node(int item) {
             key = item;
             left = null;
             right = null;
         }
     }
-
-    // Counts the number of nodes in the binary tree
     public int count() {
         return count(root);
     }
@@ -34,8 +27,8 @@ public class BinaryTree {
             return 1 + leftCount + rightCount;
         }
     }
-
-    // Example usage
+    
+    //Example of code to run the function
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
         tree.root = new Node(4);
@@ -45,6 +38,6 @@ public class BinaryTree {
         tree.root.left.right = new Node(3);
 
         int count = tree.count();
-        System.out.println("The number of nodes in the binary tree is: " + count);
+        System.out.println("The number of items in the binary tree is: " + count);
     }
 }
